@@ -1,0 +1,33 @@
+# Python environments and generated files
+/.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+
+# Local configuration; keep the example in version control
+.env
+.env.*
+!.env.example
+
+# Campaign data, QMD installation and model cache
+/data/
+/.cache/
+/.tools/
+node_modules/
+
+# Derived storage files, including campaigns under a custom BASE_DIR
+.mcp-recall/
+.*.md.lines
+.*.md.lock
+.mcp-*.tmp
+
+# OS metadata
+.DS_Store

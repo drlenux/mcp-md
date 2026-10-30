@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=77,<83"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpt-parser-mcp"
+dynamic = ["version"]
+description = "Extensible Python MCP server for the gpt-parser workspace"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp>=2.3,<3",
+    "pydantic>=2.12,<3",
+    "pydantic-settings>=2.13,<3",
+]
+
+[project.scripts]
+gpt-parser-mcp = "gpt_parser_mcp.cli:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "gpt_parser_mcp.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
